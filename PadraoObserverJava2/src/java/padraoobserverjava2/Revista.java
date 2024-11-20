@@ -1,0 +1,28 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package padraoobserverjava2;
+
+import java.util.Observable;
+/**
+ *
+ * @author user
+ */
+public class Revista extends Observable{
+    
+    private int edicao;
+    
+    public void setEdicao(int novaEdicao){
+        this.edicao = novaEdicao;
+        setChanged();
+        notifyObservers();
+    }
+    
+    public int getEdicao(){
+        return this.edicao;
+    }
+    
+}
